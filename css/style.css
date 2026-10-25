@@ -1,0 +1,292 @@
+
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+  min-width: 0;
+}
+
+.auth-page {
+  padding: 30px 16px;
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.auth-container > h1,
+.auth-container > p {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.auth-container > h1 {
+  color: #2563eb;
+  font-size: 32px;
+}
+
+.auth-card {
+  min-width: 0;
+  background: #ffffff;
+  padding: 24px;
+  margin-top: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.auth-card h2 {
+  margin-bottom: 8px;
+}
+
+.auth-card p {
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+.auth-card label {
+  display: block;
+  margin: 14px 0 6px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.auth-card input,
+.auth-card select {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.auth-card button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.auth-card button:hover {
+  background: #1d4ed8;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  min-height: 100vh;
+  overflow-y: auto;
+  flex-shrink: 0;
+  z-index: 1000;
+}
+
+.content-area {
+  width: calc(100% - 240px);
+  min-width: 0;
+  margin-left: 240px;
+}
+
+/* Sidebar navigation */
+.sidebar .nav-link {
+  border-radius: 6px;
+  overflow-wrap: anywhere;
+}
+
+.table-responsive {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  margin-bottom: 0;
+}
+
+.card {
+  max-width: 100%;
+  min-width: 0;
+}
+
+.card-body {
+  min-width: 0;
+}
+
+.form-control,
+.form-select,
+textarea {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.btn {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 767.98px) {
+  .sidebar {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    overflow-y: visible;
+  }
+
+  .sidebar .nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px !important;
+  }
+
+  .sidebar .nav-link {
+    padding: 10px;
+  }
+
+  .content-area {
+    width: 100%;
+    margin-left: 0;
+    padding: 8px !important;
+  }
+
+  main {
+    width: 100%;
+    padding: 12px !important;
+  }
+
+  main.container-fluid {
+    padding: 12px !important;
+  }
+
+  .card-body {
+    padding: 16px !important;
+  }
+
+  h1.h3 {
+    font-size: 1.4rem;
+  }
+
+  .table {
+    white-space: nowrap;
+  }
+
+  .btn {
+    white-space: normal;
+  }
+
+  /* Login / Setup page */
+  .auth-page {
+    padding: 20px 12px;
+  }
+
+  .auth-container {
+    display: block;
+    max-width: 480px;
+  }
+
+  .auth-container > h1,
+  .auth-container > p {
+    text-align: center;
+  }
+
+  .auth-card {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 380px) {
+  .sidebar .nav {
+    grid-template-columns: 1fr;
+  }
+
+  .content-area {
+    padding: 4px !important;
+  }
+
+  main,
+  main.container-fluid {
+    padding: 8px !important;
+  }
+
+  .card-body {
+    padding: 12px !important;
+  }
+
+  .auth-page {
+    padding: 12px 8px;
+  }
+
+  .auth-card {
+    padding: 16px;
+  }
+
+  .auth-container > h1 {
+    font-size: 26px;
+  }
+}
+
+/* =========================
+   Payslip print layout
+   Only applies if payslip uses id="payslip"
+========================= */
+@media print {
+  body {
+    background: #ffffff !important;
+    padding: 0 !important;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  #payslip,
+  #payslip * {
+    visibility: visible;
+  }
+
+  #payslip {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-shadow: none !important;
+  }
+}

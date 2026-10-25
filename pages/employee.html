@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HCM Lite - Employees</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+
+  <div class="d-flex flex-column flex-md-row min-vh-100">
+    <aside class="bg-dark text-white p-3 sidebar">
+      <h4 class="mb-4 text-center">HCM Lite</h4>
+
+    <nav class="nav flex-column gap-2">
+      <a class="nav-link text-white" href="Admin.html">Admin Dashboard</a>
+      <a class="nav-link text-white" href="employee.html">Employee </a>
+      <a class="nav-link text-white" href="Employees.html">Employees Dashboard</a>
+      <a class="nav-link text-white" href="leaves.html">Leave Management</a>
+      <a class="nav-link text-white" href="payslip.html">Payslip</a>
+      <a class="nav-link text-white" href="../index.html">Login / Setup</a>
+      <a class="nav-link text-white bg-primary rounded" href="settings.html">Settings</a>
+    </nav>
+    </aside>
+
+    <div class="flex-grow-1 p-2 p-md-3 content-area">
+      <!-- Main Content -->
+      <main class="container-fluid py-3 px-2 px-md-4">
+
+        <div class="d-flex flex-wrap justify-content-between
+                align-items-center gap-3 mb-4">
+          <div>
+            <h1 class="h3 mb-1">Employees </h1>
+            <p class="text-secondary mb-0">
+              Manage your company employees.
+            </p>
+          </div>
+
+          <button type="button" class="btn btn-primary">
+            + Add Employee
+          </button>
+        </div>
+
+        <!-- Search and Department Filter -->
+        <div class="card border-0 shadow-sm mb-4">
+          <div class="card-body p-3">
+            <div class="row g-3">
+
+              <div class="col-12 col-md-7">
+                <label for="searchEmployee" class="form-label">
+                  Search Employee
+                </label>
+                <input type="search" id="searchEmployee" class="form-control" placeholder="Search by name or email...">
+              </div>
+
+              <div class="col-12 col-md-5">
+                <label for="departmentFilter" class="form-label">
+                  Filter by Department
+                </label>
+                <select id="departmentFilter" class="form-select">
+                  <option value="">All Departments</option>
+                  <option value="IT">IT</option>
+                  <option value="HR">HR</option>
+                  <option value="Finance">Finance</option>
+                  <option value="Marketing">Marketing</option>
+                  <option value="Sales">Sales</option>
+                </select>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Employees Table -->
+        <div class="card border-0 shadow-sm">
+          <div class="card-body p-3">
+
+            <h2 class="h5 fw-bold mb-3">Employee List</h2>
+
+            <div class="table-responsive">
+              <table class="table table-hover align-middle">
+                <thead class="table-light">
+                  <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Department</th>
+                    <th>Salary</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td colspan="5" class="text-center text-secondary py-4">
+                      No employees added yet.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p class="text-secondary small mb-0">
+              Employee records will appear here after they are added.
+            </p>
+
+          </div>
+        </div>
+
+        <!-- Add Employee Form -->
+        <div class="card border-0 shadow-sm mt-4 mb-4">
+          <div class="card-body p-4">
+
+            <h2 class="h5 fw-bold mb-1">Add New Employee</h2>
+            <p class="text-secondary mb-4">
+              Enter employee details to create their account.
+            </p>
+
+            <form>
+              <div class="row g-3">
+
+                <div class="col-12 col-md-6">
+                  <label for="employeeName" class="form-label">
+                    Full Name
+                  </label>
+                  <input type="text" id="employeeName" class="form-control" placeholder="Enter full name" required>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label for="employeeEmail" class="form-label">
+                    Email Address
+                  </label>
+                  <input type="email" id="employeeEmail" class="form-control" placeholder="Enter email address"
+                    required>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label for="employeeDepartment" class="form-label">
+                    Department
+                  </label>
+                  <select id="employeeDepartment" class="form-select" required>
+                    <option value="">Select Department</option>
+                    <option value="IT">IT</option>
+                    <option value="HR">HR</option>
+                    <option value="Finance">Finance</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Sales">Sales</option>
+                  </select>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label for="employeeSalary" class="form-label">
+                    Monthly Salary
+                  </label>
+                  <input type="number" id="employeeSalary" class="form-control" placeholder="Enter monthly salary"
+                    min="1" required>
+                </div>
+
+                <div class="col-12">
+                  <label for="employeePassword" class="form-label">
+                    Initial Password
+                  </label>
+                  <input type="password" id="employeePassword" class="form-control"
+                    placeholder="Create employee password" required>
+                </div>
+
+                <div class="col-12">
+                  <button type="button" class="btn btn-primary">
+                    Add Employee
+                  </button>
+                  <button type="reset" class="btn btn-outline-secondary ms-2">
+                    Clear Form
+                  </button>
+                </div>
+
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>

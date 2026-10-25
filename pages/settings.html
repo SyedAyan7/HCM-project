@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HCM Lite - Settings</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+
+  <div class="d-flex">
+    <aside class="bg-dark text-white p-3" style="width: 240px; min-height: 100vh; flex-shrink: 0;">
+      <h4 class="mb-4 text-center">HCM Lite</h4>
+  
+  <nav class="nav flex-column gap-2">
+      <a class="nav-link text-white" href="Admin.html">Admin Dashboard</a>
+      <a class="nav-link text-white" href="employee.html">Employees </a>
+      <a class="nav-link text-white" href="Employees.html">Employees Dashboard</a>
+      <a class="nav-link text-white" href="leaves.html">Leave Management</a>
+      <a class="nav-link text-white" href="payslip.html">Payslip</a>
+      <a class="nav-link text-white" href="../index.html">Login / Setup</a>
+      <a class="nav-link text-white bg-primary rounded" href="settings.html">Settings</a>
+    </nav>
+    </aside>
+
+    <div class="flex-grow-1 p-3">
+      <main class="container py-4">
+        <h1 class="h3 mb-1">Office Settings</h1>
+        <p class="text-secondary mb-4">
+          Configure office timings, attendance rules and leave policy.
+        </p>
+
+        <form id="settingsForm">
+
+          <div class="card border-0 shadow-sm mb-4">
+            <div class="card-body p-4">
+              <h2 class="h5 fw-bold mb-4">Attendance Settings</h2>
+
+              <div class="mb-3">
+                <label for="officeStart" class="form-label">Office Start Time</label>
+                <input type="time" id="officeStart" class="form-control" value="09:00" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="graceMinutes" class="form-label">Grace Minutes</label>
+                <input type="number" id="graceMinutes" class="form-control" min="0" value="15" required>
+                <div class="form-text">
+                  Extra minutes allowed before an employee is marked late.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card border-0 shadow-sm mb-4">
+            <div class="card-body p-4">
+              <h2 class="h5 fw-bold mb-4">Leave Policy</h2>
+
+              <div class="mb-4">
+                <label for="leaveQuota" class="form-label">Annual Leave Quota (Days)</label>
+                <input type="number" id="leaveQuota" class="form-control" min="0" value="20" required>
+              </div>
+
+              <label class="form-label d-block">Working Days</label>
+
+              <div class="d-flex flex-wrap gap-3">
+                <label><input type="checkbox" name="workingDays" value="Monday" checked> Monday</label>
+                <label><input type="checkbox" name="workingDays" value="Tuesday" checked> Tuesday</label>
+                <label><input type="checkbox" name="workingDays" value="Wednesday" checked> Wednesday</label>
+                <label><input type="checkbox" name="workingDays" value="Thursday" checked> Thursday</label>
+                <label><input type="checkbox" name="workingDays" value="Friday" checked> Friday</label>
+                <label><input type="checkbox" name="workingDays" value="Saturday"> Saturday</label>
+                <label><input type="checkbox" name="workingDays" value="Sunday"> Sunday</label>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            Save Settings
+          </button>
+
+        </form>
+      </main>
+
+    </div>
+  </div>
+
+</body>
+
+</html>

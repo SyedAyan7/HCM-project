@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HCM Lite - Payslip</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  
+<div class="d-flex flex-column flex-md-row min-vh-100">
+  <aside class="bg-dark text-white p-3 sidebar">
+    <h4 class="mb-4 text-center">HCM Lite</h4>
+
+  <nav class="nav flex-column gap-2">
+      <a class="nav-link text-white" href="Admin.html">Admin Dashboard</a>
+      <a class="nav-link text-white" href="employee.html">Employees </a>
+      <a class="nav-link text-white" href="Employees.html">Employees Dashboard</a>
+      <a class="nav-link text-white" href="leaves.html">Leave Management</a>
+      <a class="nav-link text-white" href="payslip.html">Payslip</a>
+      <a class="nav-link text-white" href="../index.html">Login / Setup</a>
+      <a class="nav-link text-white bg-primary rounded" href="settings.html">Settings</a>
+    </nav>
+  </aside>
+
+  <div class="flex-grow-1 p-2 p-md-3 content-area">
+   <main class="container-fluid py-3 px-2 px-md-4">
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+      <div>
+        <h1 class="h3 mb-1">My Payslip</h1>
+        <p class="text-secondary mb-0">View your monthly salary details.</p>
+      </div>
+
+      <button type="button" class="btn btn-primary" onclick="window.print()">
+        Print / Save PDF
+      </button>
+    </div>
+
+    <div class="card border-0 shadow-sm" id="payslip">
+      <div class="card-body p-4 p-md-5">
+
+        <div class="text-center mb-4">
+          <h2 class="h4 fw-bold">HCM Lite</h2>
+          <p class="text-secondary mb-0">Employee Salary Slip</p>
+        </div>
+
+        <hr>
+
+        <div class="row g-3 mb-4">
+          <div class="col-md-6">
+            <p class="text-secondary mb-1">Employee Name</p>
+            <p class="fw-bold mb-0">Not available yet</p>
+          </div>
+
+          <div class="col-md-6">
+            <p class="text-secondary mb-1">Employee Email</p>
+            <p class="fw-bold mb-0">Not available yet</p>
+          </div>
+
+          <div class="col-md-6">
+            <label for="salaryMonth" class="form-label">Salary Month</label>
+            <input type="month" id="salaryMonth" class="form-control">
+          </div>
+
+          <div class="col-md-6">
+            <p class="text-secondary mb-1">Payment Status</p>
+            <p class="fw-bold mb-0">Pending calculation</p>
+          </div>
+        </div>
+
+        <h3 class="h6 fw-bold mb-3">Salary Breakdown</h3>
+
+        <div class="table-responsive">
+          <table class="table table-bordered align-middle">
+            <tbody>
+              <tr>
+                <td>Basic Salary</td>
+                <td class="text-end">Rs. 0</td>
+              </tr>
+              <tr>
+                <td>Allowances</td>
+                <td class="text-end">Rs. 0</td>
+              </tr>
+              <tr>
+                <td>Deductions</td>
+                <td class="text-end">Rs. 0</td>
+              </tr>
+              <tr class="table-light fw-bold">
+                <td>Net Salary</td>
+                <td class="text-end">Rs. 0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="small text-secondary mt-4 mb-0">
+          This payslip will display actual salary details once the application
+          functionality is connected.
+        </p>
+
+      </div>
+    </div>
+  </main>
+  </div>
+</div>
+
+
+</body>
+</html>
